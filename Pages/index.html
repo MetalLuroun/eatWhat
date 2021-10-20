@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>吃啥</title>
+    <link type="text/css" rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+<div class="choice">
+    <div id="will">
+        <h1>我想吃</h1>
+        <input type="radio" class='flag' name="flag"  value="0" checked="True"><div onclick="choose(event , 'will')" class="flag_label">食堂精选</div>
+        <input type="radio" class='flag' name="flag"  value="1"><div  onclick="choose(event , 'will')"class="flag_label">特色小吃</div>
+        <input type="radio" class='flag' name="flag"  value="2"><div  onclick="choose(event , 'will')"class="flag_label">地域精选</div>
+        <input type="radio" class='flag' name="flag"  value="3"><div  onclick="choose(event , 'will')"class="flag_label">好友聚餐</div>
+    </div>
+    <div id="loc">
+        <h1>我在</h1>
+        <div id="map">
+            <input type="radio" class='location' name="location"  value="0"><div onclick="choose(event , 'map')" class="loc_label">西边</div>
+            <input type="radio" class='location' name="location"  value="1"><div onclick="choose(event , 'map')" class="loc_label">中区</div>
+            <input type="radio" class='location' name="location"  value="2" checked="True"><div onclick="choose(event , 'map')" class="loc_label">东边</div>
+        </div>
+    </div>
+    <div id="request">
+        <button id="eatWhat" onclick="getFoodChoice(sendFoodRequest)">吃啥</button>
+        <p>不选默认为任意哦～</p>
+    </div>
+</div>
+<div id = 'foodCanvas'>
+    <button id="pre" onclick="prePic()">Previous One</button>
+    <div>
+        <p id="id"></p>
+        <p id='name'></p>
+        <p id='location'></p>
+        <img id='foodimg' style="max-height: 50vh;max-width:50vh "  src="">
+        <p id="rec"> </p>
+    </div>
+    <button id="next" onclick="nextPic()">Next One</button>
+
+</div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/decoration.js"></script>
+</html>
