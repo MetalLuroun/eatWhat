@@ -7,21 +7,21 @@ function drawFood(foodCounter= 0){
 
     // document.getElementsByClassName('choice')[0].style.display = 'none'
 
-    if ((foodCounter >= data.length) | (foodCounter <0)){
-        document.getElementById('foodCanvas').innerHTML += '到底了'
-    }else{
-        let id = data[foodCounter]['id']
-        let name = data[foodCounter]['name']
-        let imgUrl = data[foodCounter]['picUrls'][0]
-        let location = data[foodCounter]['locate']
-        let rec = data[foodCounter]['recommend']
-        document.getElementById('id').innerHTML = id
-        document.getElementById('name').innerHTML = name
-        document.getElementById('rec').innerHTML = rec
-        document.getElementById('location').innerHTML = location
-        document.getElementById('foodimg').src = "http://" + imgUrl
 
-    }
+
+    console.log(foodCounter)
+    let id = data[foodCounter]['id']
+    let name = data[foodCounter]['name']
+    let imgUrl = data[foodCounter]['picUrls'][0]
+    let location = data[foodCounter]['locate']
+    let rec = data[foodCounter]['recommend']
+    document.getElementById('id').innerHTML = id
+    document.getElementById('name').innerHTML = name
+    document.getElementById('rec').innerHTML = rec
+    document.getElementById('location').innerHTML = location
+    document.getElementById('foodimg').src = "http://" + imgUrl
+
+
 }
 
 function nextPic(){

@@ -52,23 +52,33 @@ input{
 #foodCanvas{
     display:none;
     position: absolute;
-    left: 15vw;
-    top: 15%;
-    /*left: 50vw;*/
-    /*height: 50vh;*/
-    margin: auto;
-    /*top: auto;*/
+    top: 15vh;
+    height: 60vh;
     font-size: 40px;
     z-index: 99;
-    background-color: azure;
+
     text-align: center;
     color: black;
-    width: 70vw;
-    border:1px black solid;
+    width: 80vw;
+
+    justify-content: space-between;
+    align-items: center;
+}
+#foodCanvas button{
+    display: block;
+    height: 6vh;
+    width: 10vw;
+    top: 27vh;
 }
 #foodCanvas img{
     height: 30vh;
-    width: 50vw;
+    width: 70vw;
+    margin: 5vw;
+}
+#food{
+    background-color: azure;
+    margin:5vw;
+    height: 50vh;
 }
 h1{
     font-size: 60px;
