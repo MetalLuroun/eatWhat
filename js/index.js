@@ -1,24 +1,32 @@
+
 let foodCounter = 0
 let foodData = 0
 
-function drawFood(foodCounter= 0){
+
+
+function drawFood(counter= 0){
     let data = foodData
+    
+    if (foodCounter >= data.length){
+        foodCounter = 0
+    }
+    if (foodCounter == 0){
+       document.getElementById('pre').style.display = 'hide'
+        
+    }
+    counter = foodCounter
     document.getElementById('foodCanvas').style.display = "flex"
 
-    // document.getElementsByClassName('choice')[0].style.display = 'none'
-
-
-
-    console.log(foodCounter)
-    let id = data[foodCounter]['id']
-    let name = data[foodCounter]['name']
-    let imgUrl = data[foodCounter]['picUrls'][0]
-    let location = data[foodCounter]['locate']
-    let rec = data[foodCounter]['recommend']
-    document.getElementById('id').innerHTML = id
+    console.log(counter)
+    // let id = data[counter]['id']
+    let name = data[counter]['name']
+    let imgUrl = data[counter]['picUrls'][0]
+    let location = data[counter]['locate']
+    let rec = data[counter]['recommend']
+    // document.getElementById('id').innerHTML = id
     document.getElementById('name').innerHTML = name
     document.getElementById('rec').innerHTML = rec
-    document.getElementById('location').innerHTML = location
+    document.getElementById('location').innerHTML ="坐标：" + location
     document.getElementById('foodimg').src = "http://" + imgUrl
 
 
@@ -26,6 +34,7 @@ function drawFood(foodCounter= 0){
 
 function nextPic(){
     foodCounter++
+    
     drawFood(foodCounter)
 }
 function  prePic(){
@@ -60,7 +69,6 @@ function getFoodChoice(sendReqCallBack) {
     sendReqCallBack(url)
 }
 
-
 function sendFoodRequest(url){
     console.log(url);
     let getFoodPromise = new Promise(function(resolve , reject){
@@ -80,4 +88,23 @@ function sendFoodRequest(url){
         function(error){alert(error)}
     )
 }
+function closeCanvas(event){
+    let e = event.target
+    e.style.display = 'none'
+}
+
+function generatePic(){
+    // let foodCanvas = document.getElementById("foodCanvas")
+    // foodCanvas.style.backgroundColor = "orange"
+    return null
+}
+
+(function stopCatch(){
+    let e = document.getElementById('foodCanvas')
+    for(let i of e.children){
+        i.addEventListener('click' , (event) => {
+            event.stopPropagation();
+        })
+    }
+}())
 

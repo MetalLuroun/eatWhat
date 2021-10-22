@@ -1,16 +1,19 @@
+*{
+    margin: 0px;
+    font-family:sans-serif ;
+}
 input{
     display: none;
 }
 #will{
-    height: 25vh;
-    width:100%;
+    height: 20vh;
+    /*width: 100vw;*/
+    /*background-color:green ;*/
     margin: 0px;
     text-align: center;
 
 }
-*{
-    color: orange;
-}
+
 .flag {
     display: none;
     background-color: white;
@@ -20,23 +23,27 @@ input{
     border: 1px black solid;
     width:40vw;
     height: 4vh;
-    margin: 4vw;
+    margin-left: 4vw;
     border-radius: 1vh;
     font-size: 50px;
 }
 #loc{
     text-align: center;
-    height: 30vh;
+    /*background-color: aqua;*/
+    height: 20vh;
+    /*width: 100vw;*/
 }
 #map{
-    background-color: powderblue;
+    background-image: url("../material/ditu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     margin:auto ;
-
     width: 90%;
     height: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 .loc_label{
     border: 1px black solid;
@@ -47,48 +54,76 @@ input{
 }
 #request{
     text-align: center;
+    height: 10vh;
+    /*background-color: blueviolet;*/
 
 }
 #foodCanvas{
     display:none;
     position: absolute;
-    top: 15vh;
-    height: 60vh;
+    width: 100%;
+    height: 100vh;
     font-size: 40px;
     z-index: 99;
-
+    background-color: rgba(0,0,0,0.5);
     text-align: center;
     color: black;
-    width: 80vw;
-
+    top: 0px;
     justify-content: space-between;
     align-items: center;
+    box-sizing: content-box;
+
 }
-#foodCanvas button{
-    display: block;
-    height: 6vh;
-    width: 10vw;
-    top: 27vh;
-}
-#foodCanvas img{
+#foodCanvas #food img{
     height: 30vh;
     width: 70vw;
     margin: 5vw;
 }
+.jiantou{
+    display: block;
+    /*height: 4vh;*/
+    /*width: 14vw;*/
+    /*top: 27vh;*/
+    margin: 0px;
+}
+#save{
+    margin-top: 19vh;
+    border-radius: 1vh;
+}
+
 #food{
     background-color: azure;
     margin:5vw;
-    height: 50vh;
+    height: 70vh;
+    border-radius:2px;
+    border: 1vw yellow solid;
 }
 h1{
     font-size: 60px;
+    color: black;
 }
-#loc input{
-    margin: 5vw;
+.hide{
+    display: none;
 }
 .choice button {
     width: 80vw;
-    height: 10vh;
+    height: 6vh;
     font-size: 60px;
     background-color: aquamarine;
+    border-radius: 2vh;
+}
+#save{
+    width: 12vw;
+    height: 2vh;
+    border-radius: 2px;
+    background-color: orange;
+    color: white;
+}
+#chatu_div{
+    text-align: center;
+    height: 50vh;
+    width: 100vw;
+    background-image: url("../material/shouyechatu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }

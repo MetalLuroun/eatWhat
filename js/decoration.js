@@ -17,3 +17,21 @@ function choose(event , id){
         }
     }
 }
+function save(){
+    document.getElementById("foodCanvas").style.backgroundColor='orange'
+    document.querySelectorAll('.jiantou')[0].style.display = "none"
+    document.querySelectorAll('.jiantou')[1].style.display = "none"
+    let food = document.getElementById("food")
+    food.style.width='90vw'
+    food.style.height='90vh'
+    food.style.marginLeft='10vw'
+    let hide = document.querySelectorAll('.hide')
+    for (let i of hide){
+        i.className = 'no-hide'
+        console.log(i)
+    }
+    
+}
+function save(){
+    
+}

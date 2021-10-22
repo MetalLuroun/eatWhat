@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>吃啥</title>
     <link type="text/css" rel="stylesheet" href="../CSS/index.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/canvas.css">
+</head>
 </head>
 <body>
 <div class="choice">
@@ -26,19 +28,59 @@
         <button id="eatWhat" onclick="getFoodChoice(sendFoodRequest)">吃啥</button>
         <p>不选默认为任意哦～</p>
     </div>
-</div>
-<div id = 'foodCanvas'>
-    <button id="pre" onclick="prePic()">Prev</button>
-    <div id="food">
-        <p id="id"></p>
-        <p id='name'></p>
-        <p id='location'></p>
-        <img id='foodimg' style="max-height: 50vh;max-width:50vh "  src="">
-        <p id="rec"> </p>
+    <div id='chatu_div'>
     </div>
-    <button id="next" onclick="nextPic()">Next</button>
+
 </div>
+
+<div id = 'foodCanvas' onclick="closeCanvas(event)">
+
+
+    <img src="../material/jiantou1.png" id="pre" class='jiantou' onclick="prePic()">
+    <div id="food">
+        <img class="hide" id="close" style="float: right;height: 2vh;width: 2vh" src="../material/guanbi.png">
+
+        <div id = 'text' class="hide">
+            <p>今天吃啥？</p>
+            <p>吃——</p>
+        </div>
+
+        <img id='foodimg' style="max-height: 50vh;max-width:50vh "  src="">
+        <h1 id='name'></h1>
+        <p id='location' style="color: rgba(0,0,0,0.6)"></p>
+        <p id="rec" style ="height: 3em;color: rgba(0,0,0,0.4)"> </p>
+        <button style="display: inline-block" id="save" class = 'jiantou' onclick="generatePic();save()">保存</button>
+        <img class="hide" id="qrcode" src="../material/QRcode_image.svg.png" style="width: 8vh;height: 8vh;margin: auto">
+        <p class="hide" >扫码看看</p>
+        <img class="hide" id="share_logo" src="../material/logo-fenxiangye.png" style="height: 4vh;width: 4vh">
+
+    </div>
+
+    <img src="../material/jiantou-2.png" id="next" onclick="nextPic()">
+</div>
+<!--<div id='sharePic'>-->
+<!--    <div id = "shareContent">-->
+<!--        <img id="close" src="../material/guanbi.png">-->
+<!--        <div id = 'text'>-->
+<!--            <p>今天吃啥？</p>-->
+<!--            <p>吃——</p>-->
+<!--        </div>-->
+
+<!--        <div id = "shareFood">-->
+<!--&lt;!&ndash;            <h2 id="shareH">XXXXXXX</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="../material/ditu.png" style="display: block;margin: auto">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="../material/dizhi.png" style="display: inline">&ndash;&gt;-->
+<!--&lt;!&ndash;            <p style="display: inline">xxxxxxxxxxx</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div id ='shareDescription'>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <img id="qrcode" src="../material/QRcode_image.svg.png" style="display:block;">-->
+<!--        <p style="display:inline;">扫码看看</p>-->
+<!--        <img id="share_logo" src="../material/logo-fenxiangye.png" style="display:inline-block;">-->
+<!--    </div>-->
+<!--    <div>长按图片保存到本地</div>-->
+<!--</div>-->
 </body>
 <script src="../js/index.js"></script>
 <script src="../js/decoration.js"></script>
+<script src="../lib/html2canvas.min.js"></script>
 </html>
