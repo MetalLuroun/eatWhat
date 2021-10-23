@@ -11,24 +11,25 @@
 <div class="choice">
     <div id="will">
         <h1>我想吃</h1>
-        <input type="radio" class='flag' name="flag"  value="0" checked="True"><div onclick="choose(event , 'will')" class="flag_label">食堂精选</div>
-        <input type="radio" class='flag' name="flag"  value="1"><div  onclick="choose(event , 'will')"class="flag_label">特色小吃</div>
-        <input type="radio" class='flag' name="flag"  value="2"><div  onclick="choose(event , 'will')"class="flag_label">地域精选</div>
-        <input type="radio" class='flag' name="flag"  value="3"><div  onclick="choose(event , 'will')"class="flag_label">好友聚餐</div>
+        <input type="radio" class='flag' name="flag"  value="0" checked="True"><div onclick="choose(event , 'will')" class="flag_label gray_font">食堂精选</div>
+        <input type="radio" class='flag' name="flag"  value="1"><div  onclick="choose(event , 'will')"class="flag_label gray_font">特色小吃</div>
+        <input type="radio" class='flag' name="flag"  value="2"><div  onclick="choose(event , 'will')"class="flag_label gray_font">地域精选</div>
+        <input type="radio" class='flag' name="flag"  value="3"><div  onclick="choose(event , 'will')"class="flag_label gray_font">好友聚餐</div>
     </div>
     <div id="loc">
         <h1>我在</h1>
         <div id="map">
-            <input type="radio" class='location' name="location"  value="0"><div onclick="choose(event , 'map')" class="loc_label">西边</div>
-            <input type="radio" class='location' name="location"  value="1"><div onclick="choose(event , 'map')" class="loc_label">中区</div>
-            <input type="radio" class='location' name="location"  value="2" checked="True"><div onclick="choose(event , 'map')" class="loc_label">东边</div>
+            <input type="radio" class='location' name="location"  value="0"><div onclick="choose(event , 'map')" class="loc_label gray_font">西边</div>
+            <input type="radio" class='location' name="location"  value="1"><div onclick="choose(event , 'map')" class="loc_label gray_font">中区</div>
+            <input type="radio" class='location' name="location"  value="2" checked="True"><div onclick="choose(event , 'map')" class="loc_label gray_font">东边</div>
         </div>
     </div>
     <div id="request">
-        <button id="eatWhat" onclick="getFoodChoice(sendFoodRequest)">吃啥</button>
-        <p>不选默认为任意哦～</p>
+        <button id="eatWhat" onclick="getFoodChoice(sendFoodRequest)">吃啥！</button>
+        <p style="margin-top: 1vh ">不选默认为任意哦～</p>
     </div>
     <div id='chatu_div'>
+        <img src="../material/shouyechatu.png">
     </div>
 
 </div>
@@ -38,25 +39,25 @@
 
     <img src="../material/jiantou1.png" id="pre" class='jiantou' onclick="prePic()">
     <div id="food">
-        <img class="hide" id="close" style="float: right;height: 2vh;width: 2vh" src="../material/guanbi.png">
+        <img class="hide" id="close" style="float: right;height: 2vh;width: 2vh" onclick="closeShare()" src="../material/guanbi.png">
 
-        <div id = 'text' class="hide">
+        <div id = 'text' class="hide" style="color: #FFA500">
             <p>今天吃啥？</p>
             <p>吃——</p>
         </div>
 
         <img id='foodimg' style="max-height: 50vh;max-width:50vh "  src="">
         <h1 id='name'></h1>
-        <p id='location' style="color: rgba(0,0,0,0.6)"></p>
-        <p id="rec" style ="height: 3em;color: rgba(0,0,0,0.4)"> </p>
-        <button style="display: inline-block" id="save" class = 'jiantou' onclick="generatePic();save()">保存</button>
-        <img class="hide" id="qrcode" src="../material/QRcode_image.svg.png" style="width: 8vh;height: 8vh;margin: auto">
+        <p id='location' style="color: #717070;margin-top: 1vh"></p>
+        <p id="rec" style ="height: 3em;color: #A0A0A0;margin-top: 2vw;white-space: pre-line;"> </p>
+        <button style="display: inline-block;margin:15vh 0px auto" id="save" class = 'jiantou' onclick="generatePic();save()">保存</button>
+        <img class="hide" id="qrcode" src="../material/QRcode_image.svg.png" style="width: 8.75vh;height: 8.75vh;margin: 10vh 0px auto;border: 1px black solid ;padding: 2px">
         <p class="hide" >扫码看看</p>
-        <img class="hide" id="share_logo" src="../material/logo-fenxiangye.png" style="height: 4vh;width: 4vh">
+        <img class="hide" id="share_logo" src="../material/logo-fenxiangye.png" style="height: 4.5vh;width: 21vw">
 
     </div>
 
-    <img src="../material/jiantou-2.png" id="next" onclick="nextPic()">
+    <img src="../material/jiantou-2.png" class = 'jiantou' id="next" onclick="nextPic()">
 </div>
 <!--<div id='sharePic'>-->
 <!--    <div id = "shareContent">-->

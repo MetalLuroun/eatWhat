@@ -21,6 +21,9 @@
 }
 #text{
     float: left;
+    position: relative;
+    margin-top: 1vh;
+    margin-left: 5vw;
 }
 #qrcode{
     height: 5vh;
@@ -31,4 +34,4 @@
     border: 1px black solid;
     text-align: center;
 }
-img
+

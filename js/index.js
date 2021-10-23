@@ -17,24 +17,22 @@ function drawFood(counter= 0){
     counter = foodCounter
     document.getElementById('foodCanvas').style.display = "flex"
 
-    console.log(counter)
+    // console.log(counter)
     // let id = data[counter]['id']
     let name = data[counter]['name']
     let imgUrl = data[counter]['picUrls'][0]
     let location = data[counter]['locate']
     let rec = data[counter]['recommend']
     // document.getElementById('id').innerHTML = id
+    // console.log(rec)
     document.getElementById('name').innerHTML = name
     document.getElementById('rec').innerHTML = rec
     document.getElementById('location').innerHTML ="坐标：" + location
     document.getElementById('foodimg').src = "http://" + imgUrl
-
-
 }
 
 function nextPic(){
     foodCounter++
-    
     drawFood(foodCounter)
 }
 function  prePic(){
@@ -49,7 +47,7 @@ function parseFood(data){
 }
 
 function getFoodChoice(sendReqCallBack) {
-    console.log('llll');
+    // console.log('llll');
     let url = "http://49.234.185.235:9000/food/by_location_flag"
     let locInput = document.getElementsByClassName('location')
     let flagInput = document.getElementsByClassName('flag')
@@ -70,7 +68,7 @@ function getFoodChoice(sendReqCallBack) {
 }
 
 function sendFoodRequest(url){
-    console.log(url);
+    // console.log(url);
     let getFoodPromise = new Promise(function(resolve , reject){
         let req = new XMLHttpRequest()
         req.open('GET',url)

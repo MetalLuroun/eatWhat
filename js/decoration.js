@@ -5,7 +5,8 @@ function choose(event , id){
     let i = 0
     for (i=0;i<flagInputs.children.length;i++){
         flagInputs.children[i].style.backgroundColor = 'white'
-        flagInputs.children[i].style.color = 'orange'
+        flagInputs.children[i].style.color ='rgba(0,0,0,0.5)'
+        // flagInputs.children[i].style.color = 'orange'
         if (button == flagInputs.children[i]){
             flagInputs.children[i-1].checked = true
         }
@@ -16,11 +17,19 @@ function choose(event , id){
             flagInputs.children[i+1].style.color = 'white'
         }
     }
+    
+    for (let i of document.getElementsByTagName('h1')){
+        i.style.color = 'black'
+    }
 }
+
+let preFoodCanvas
 function save(){
+    preFoodCanvas = JSON.stringify(document.getElementById('foodCanvas'))
     document.getElementById("foodCanvas").style.backgroundColor='orange'
     document.querySelectorAll('.jiantou')[0].style.display = "none"
     document.querySelectorAll('.jiantou')[1].style.display = "none"
+    document.querySelectorAll('.jiantou')[2].style.display = "none"
     let food = document.getElementById("food")
     food.style.width='90vw'
     food.style.height='90vh'
@@ -28,10 +37,25 @@ function save(){
     let hide = document.querySelectorAll('.hide')
     for (let i of hide){
         i.className = 'no-hide'
-        console.log(i)
+        // console.log(i)
     }
     
 }
-function save(){
-    
+
+function closeShare(){
+    // document.getElementById('foodCanvas').remove()
+    // let myObject = JSON.parse(preFoodCanvas)
+    // document.body.appendChild(myObject)
+    document.getElementById("foodCanvas").style.backgroundColor='rgba(0,0,0,0.5)'
+    document.querySelectorAll('.jiantou')[0].style.display = "block"
+    document.querySelectorAll('.jiantou')[1].style.display = "inline-block"
+    document.querySelectorAll('.jiantou')[2].style.display = "block"
+    let food = document.getElementById("food")
+    food.style.width='80vw'
+    food.style.height='70vh'
+    food.style.marginLeft='5vw'
+    let hide = document.querySelectorAll('.no-hide')
+    for (let i of hide){
+        i.className = 'hide'
+    }
 }
