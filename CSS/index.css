@@ -67,7 +67,7 @@ input{
     height: 4.5vh;
     width: 82vw;
     border-radius: 1vh;
-    background-color: orange;
+    background-color: #FF8215;
     color:white;
     font-size:40px;
 }
@@ -75,7 +75,7 @@ input{
 #foodCanvas{
     display:none;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     font-size: 40px;
     z-index: 99;
@@ -89,9 +89,11 @@ input{
 
 }
 #foodCanvas #food img{
+    /*height: 30vh;*/
     height: 30vh;
-    width: 70vw;
-    margin: 5vw;
+    width: 90%;
+    margin-top: 5vw;
+    /*margin: 5vw;*/
 }
 .jiantou{
     display: block;
@@ -99,18 +101,19 @@ input{
     position: relative;
 }
 #save{
-
     border-radius: 1vh;
-    margin-top:15vh ;
+    margin-top: 20vh;
+    font-size: 30px;
 }
 
 #food{
     background-color: azure;
-    margin:5vw;
+    /*margin:5vw;*/
     height: 70vh;
-    width: 77vw;
+    width: 80vw;
+    /*width: 80vw;*/
     border-radius:2vh;
-    border: 1vw yellow solid;
+    border: 1vw #FF8115 solid;
 }
 h1{
     font-size: 60px;
@@ -123,7 +126,7 @@ h1{
     width: 80vw;
     height: 6vh;
     font-size: 60px;
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
     border-radius: 2vh;
 }
 #save{

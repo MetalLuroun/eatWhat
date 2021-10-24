@@ -19,14 +19,14 @@
     <div id="loc">
         <h1>我在</h1>
         <div id="map">
-            <input type="radio" class='location' name="location"  value="0"><div onclick="choose(event , 'map')" class="loc_label gray_font">西边</div>
+            <input type="radio" class='location' name="location"  checked="True" value="0"><div onclick="choose(event , 'map')" class="loc_label gray_font">西边</div>
             <input type="radio" class='location' name="location"  value="1"><div onclick="choose(event , 'map')" class="loc_label gray_font">中区</div>
-            <input type="radio" class='location' name="location"  value="2" checked="True"><div onclick="choose(event , 'map')" class="loc_label gray_font">东边</div>
+            <input type="radio" class='location' name="location"  value="2" ><div onclick="choose(event , 'map')" class="loc_label gray_font">东边</div>
         </div>
     </div>
     <div id="request">
         <button id="eatWhat" onclick="getFoodChoice(sendFoodRequest)">吃啥！</button>
-        <p style="margin-top: 1vh ">不选默认为任意哦～</p>
+        <p style="margin-top: 1vh;font-size: 30px;color:rgba(71,70,70,0.68)">不选默认为任意哦～</p>
     </div>
     <div id='chatu_div'>
         <img src="../material/shouyechatu.png">
@@ -37,12 +37,12 @@
 <div id = 'foodCanvas' onclick="closeCanvas(event)">
 
 
-    <img src="../material/jiantou1.png" id="pre" class='jiantou' onclick="prePic()">
+    <img src="../material/jiantou1.png" id="pre" class='jiantou' style="width: 10vw;height: 10vw;margin: 0px" onclick="prePic()">
     <div id="food">
-        <img class="hide" id="close" style="float: right;height: 2vh;width: 2vh" onclick="closeShare()" src="../material/guanbi.png">
+        <img class="hide" id="close" style="float: right;height: 3vh;width: 3vh;margin-right: 2vh" onclick="closeShare()" src="../material/guanbi.png">
 
         <div id = 'text' class="hide" style="color: #FFA500">
-            <p>今天吃啥？</p>
+            <p> 今天吃啥？</p>
             <p>吃——</p>
         </div>
 
@@ -50,14 +50,14 @@
         <h1 id='name'></h1>
         <p id='location' style="color: #717070;margin-top: 1vh"></p>
         <p id="rec" style ="height: 3em;color: #A0A0A0;margin-top: 2vw;white-space: pre-line;"> </p>
-        <button style="display: inline-block;margin:15vh 0px auto" id="save" class = 'jiantou' onclick="generatePic();save()">保存</button>
+        <button style="display: inline-block;margin:18vh 0px auto" id="save" class = 'jiantou' onclick="generatePic();save()">保存</button>
         <img class="hide" id="qrcode" src="../material/QRcode_image.svg.png" style="width: 8.75vh;height: 8.75vh;margin: 10vh 0px auto;border: 1px black solid ;padding: 2px">
         <p class="hide" >扫码看看</p>
         <img class="hide" id="share_logo" src="../material/logo-fenxiangye.png" style="height: 4.5vh;width: 21vw">
 
     </div>
 
-    <img src="../material/jiantou-2.png" class = 'jiantou' id="next" onclick="nextPic()">
+    <img src="../material/jiantou-2.png" class = 'jiantou' style="width: 10vw;height: 10vw;margin: 0px" id="next" onclick="nextPic()">
 </div>
 <!--<div id='sharePic'>-->
 <!--    <div id = "shareContent">-->

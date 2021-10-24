@@ -76,7 +76,7 @@ function sendFoodRequest(url){
             if (req.status == 200) {
                 resolve(req.responseText)
             } else {
-                reject(req.status + "Some Thing Wrong")
+                reject('至少要选择一项哦')
             }
         }
         req.send()
@@ -106,3 +106,30 @@ function generatePic(){
     }
 }())
 
+const x = document.getElementById("demo");
+(function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        // 114.43
+        // 114.39
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+})()
+
+function showPosition(position) {
+    let loc = document.querySelectorAll('#map input')
+    console.log(loc)
+    let l = position.coords.longitude
+    console.log(l)
+    if(l > 114.2){
+        loc[2].checked = true
+        console.log(loc[2].checked)
+    }else if(l>114 & l <114.2){
+        loc[1].checked = true
+    }else{
+        loc[0].checked = true
+    }
+    defaultChoice()
+    
+}

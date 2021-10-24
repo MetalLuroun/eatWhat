@@ -1,5 +1,27 @@
+function defaultChoice(){
+    let flagInputsW = document.getElementById('will')
+    
+    for (let i=0;i<flagInputsW.children.length;i++){
+        if (flagInputsW.children[i].checked){
+            flagInputsW.children[i+1].style.backgroundColor = 'orange'
+            flagInputsW.children[i+1].style.color = 'white'
+        }
+    }
+    
+    let flagInputsL = document.getElementById('map')
+    for (let i=0;i<flagInputsL.children.length;i++){
+        console.log(flagInputsL.children[i].checked)
+        if (flagInputsL.children[i].checked){
+            flagInputsL.children[i+1].style.backgroundColor = 'orange'
+            flagInputsL.children[i+1].style.color = 'white'
+        }
+    }
+}
+
+
+
 function choose(event , id){
-    console.log("Provoked")
+    // console.log("Provoked")
     let flagInputs = document.getElementById(id)
     let button = event.target
     let i = 0
@@ -33,7 +55,7 @@ function save(){
     let food = document.getElementById("food")
     food.style.width='90vw'
     food.style.height='90vh'
-    food.style.marginLeft='10vw'
+    food.style.marginLeft='5vw'
     let hide = document.querySelectorAll('.hide')
     for (let i of hide){
         i.className = 'no-hide'
@@ -53,7 +75,7 @@ function closeShare(){
     let food = document.getElementById("food")
     food.style.width='80vw'
     food.style.height='70vh'
-    food.style.marginLeft='5vw'
+
     let hide = document.querySelectorAll('.no-hide')
     for (let i of hide){
         i.className = 'hide'
