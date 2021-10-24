@@ -2,7 +2,12 @@
 let foodCounter = 0
 let foodData = 0
 
-
+let date = new Date();
+date.setDate(date.getDate() - 1);
+let willCookie = '';
+willCookie += 'CookieName=Value';
+willCookie += 'expires' + date.toUTCString();
+document.cookie = willCookie;
 
 function drawFood(counter= 0){
     let data = foodData
