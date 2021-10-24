@@ -104,20 +104,24 @@ function generatePic(){
             event.stopPropagation();
         })
     }
-}())
+}());
 
-const x = document.getElementById("demo");
+
 (function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
         // 114.43
         // 114.39
+        console.log('have Location')
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+        console.log('No Location')
+        defaultChoice()
     }
+   
 })()
 
 function showPosition(position) {
+    console.log('Location')
     let loc = document.querySelectorAll('#map input')
     console.log(loc)
     let l = position.coords.longitude
@@ -131,5 +135,4 @@ function showPosition(position) {
         loc[0].checked = true
     }
     defaultChoice()
-    
 }
