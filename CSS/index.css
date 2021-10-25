@@ -104,10 +104,14 @@ input{
     border-radius: 1vh;
     margin-top: 20vh;
     font-size: 30px;
+    background-color: #FF8215;
+    width: 38.4vw;
+    height: 4.5vh;
+    color: white;
 }
 
 #food{
-    background-color: azure;
+    background-color: white;
     /*margin:5vw;*/
     height: 70vh;
     width: 80vw;
@@ -129,14 +133,7 @@ h1{
     /*background-color: aquamarine;*/
     border-radius: 2vh;
 }
-#save{
-    width: 38.4vw;
-    height: 4.5vh;
-    border-radius: 1vh;
-    background-color: orange;
-    color: white;
 
-}
 #chatu_div{
     text-align: center;
     height: 30vh;
