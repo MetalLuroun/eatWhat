@@ -118,6 +118,7 @@ function generatePic(){
         // 114.43
         // 114.39
         console.log('have Location')
+        defaultChoice()
     } else {
         console.log('No Location')
         defaultChoice()
