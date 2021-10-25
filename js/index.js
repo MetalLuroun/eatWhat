@@ -121,9 +121,8 @@ function generatePic(){
         
     } else {
         console.log('No Location')
-        
+       
     }
-   
 })()
 
 function showPosition(position) {
