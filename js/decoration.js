@@ -17,7 +17,7 @@ function defaultChoice(){
         }
     }
 }
-
+defaultChoice()
 
 
 function choose(event , id){
